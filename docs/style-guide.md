@@ -80,9 +80,9 @@ Responsive no negociable: sin scroll horizontal (`overflow-x: clip` en `html` y 
 - Borde hairline `--color-rule`, radio 6 px, superficie `--color-paper-2`.
 - Sin cards anidadas, sin franja lateral de color.
 
-### Badges de estado (`Badge`)
-- `operational` (success), `degraded` (warning), `critical` (danger), `neutral`.
-- Siempre con icono (dot + glyph) además del color.
+### Badges de estado (`StatusBadge`)
+- Estados: `operational` (success), `degraded` (warning), `critical` (danger), `neutral`.
+- Siempre con punto de color + texto además del color de fondo (nunca solo color).
 
 ### Tablas (`Table`)
 - Números con `tabular-nums`; en móvil colapsan a tarjetas con `data-label`.

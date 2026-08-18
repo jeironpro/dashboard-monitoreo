@@ -1,6 +1,6 @@
 // Metadatos de estado/severidad: color + etiqueta + icono. Nunca dependen solo del color.
 
-import type { AlertSeverity, LogLevel, ServerStatus } from '@/types/dashboard'
+import type { AlertSeverity, AlertStatus, LogLevel, LogStatus, ServerStatus } from '@/types/dashboard'
 
 export interface StatusMeta {
   label: string
@@ -64,6 +64,25 @@ export const LOG_LEVEL: Record<LogLevel, StatusMeta> = {
     dot: 'bg-signal',
     soft: 'bg-signal-soft',
   },
+}
+
+/** Etiqueta de estados de ciclo de vida (logs y alertas): texto + color. */
+export interface StatusLabel {
+  label: string
+  /** Clase de color de texto (Tailwind). */
+  cls: string
+}
+
+export const LOG_STATUS: Record<LogStatus, StatusLabel> = {
+  new: { label: 'Nuevo', cls: 'text-danger' },
+  acknowledged: { label: 'Visto', cls: 'text-warning' },
+  resolved: { label: 'Resuelto', cls: 'text-success' },
+}
+
+export const ALERT_STATUS: Record<AlertStatus, StatusLabel> = {
+  open: { label: 'Abierta', cls: 'text-danger' },
+  investigating: { label: 'En investigación', cls: 'text-warning' },
+  resolved: { label: 'Resuelta', cls: 'text-success' },
 }
 
 export const ALERT_SEVERITY: Record<AlertSeverity, StatusMeta> = {

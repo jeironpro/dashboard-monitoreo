@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatGb, formatMs, formatNumber, formatPct, formatTime, formatUptime, timeAgo } from './format'
+import { formatGb, formatMs, formatNumber, formatTime, formatUptime, timeAgo } from './format'
 
 describe('formatMs', () => {
   it('muestra milisegundos bajo 1000', () => {
@@ -16,12 +16,6 @@ describe('formatMs', () => {
   })
 })
 
-describe('formatPct', () => {
-  it('añade el símbolo de porcentaje', () => {
-    expect(formatPct(99.9)).toBe('99.9 %')
-    expect(formatPct(0)).toBe('0.0 %')
-  })
-})
 
 describe('formatUptime', () => {
   it('usa dos decimales', () => {

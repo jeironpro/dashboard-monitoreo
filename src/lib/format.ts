@@ -5,10 +5,6 @@ export function formatMs(ms: number): string {
   return `${(ms / 1000).toFixed(ms < 10000 ? 1 : 0)} s`
 }
 
-export function formatPct(value: number, digits = 1): string {
-  return `${value.toFixed(digits)} %`
-}
-
 export function formatNumber(value: number): string {
   // useGrouping explícito: el ICU por defecto no agrupa números de 4 dígitos en es-ES.
   return new Intl.NumberFormat('es-ES', {
@@ -32,10 +28,6 @@ export function formatTime(epoch: number): string {
     minute: '2-digit',
     second: '2-digit',
   }).format(epoch)
-}
-
-export function formatDate(epoch: number): string {
-  return new Intl.DateTimeFormat('es-ES', { day: '2-digit', month: 'short' }).format(epoch)
 }
 
 export function timeAgo(epoch: number, now: number): string {
