@@ -1,4 +1,3 @@
-import { Activity } from 'lucide-react'
 import { NAV_SECTIONS } from './nav'
 import { cn } from '@/lib/utils'
 import { formatTime } from '@/lib/format'
@@ -17,22 +16,18 @@ export function SidebarContent({ active, data, onNavigate }: SidebarContentProps
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex items-center gap-2.5 px-4 pb-5 pt-5">
-        <span className="grid size-8 shrink-0 place-items-center rounded-md bg-signal text-signal-ink">
-          <Activity className="size-4" aria-hidden="true" />
+      <a
+        href="#overview"
+        onClick={onNavigate}
+        aria-label="Vigía — ir al inicio"
+        className="flex items-center gap-2.5 px-4 pb-5 pt-5"
+      >
+        <img src="/favicon.svg" alt="" aria-hidden="true" className="size-8 shrink-0" />
+        <span className="leading-tight">
+          <span className="block font-display text-base font-semibold tracking-tight text-ink">Vigía</span>
+          <span className="block text-xs text-muted-foreground">observabilidad</span>
         </span>
-        <div className="leading-tight">
-          <div className="font-display text-base font-semibold tracking-tight text-ink">Vigía</div>
-          <div className="text-xs text-muted-foreground">observabilidad</div>
-        </div>
-      </div>
-
-      <div className="px-4 pb-4">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-paper-3 px-2 py-0.5 text-xs font-medium text-neutral">
-          <span className="size-1.5 rounded-full bg-signal" aria-hidden="true" />
-          {data.environment}
-        </span>
-      </div>
+      </a>
 
       <nav className="flex-1 space-y-1 px-3" aria-label="Secciones del dashboard">
         {NAV_SECTIONS.map((section) => {
