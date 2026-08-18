@@ -22,6 +22,12 @@ Frontend de un dashboard de **observabilidad de infraestructura** en tiempo real
 
 Sistema de diseño generado con las skills **Hallmark** (género *modern-minimal*, tema *Cobalt*) y **frontend-design**. Los tokens (OKLCH, tipografía, espaciado, easings) viven en `tokens.css` y se mapean a las variables de shadcn/ui en `src/index.css`. El libro de estilo está en `docs/style-guide.md` y el plan de implementación por tareas (convención dicresoft/TASK.md) en `docs/plan-implementacion.md`.
 
+## Convenciones de código
+
+- **Código en inglés**: nombres de variables, funciones, tipos, componentes, claves de datos y valores de enums siempre en inglés (`useDashboardData`, `ServerStatus`, `cpuPct`, …).
+- **Comentarios en español**: los comentarios, JSDoc y descripciones de tests se escriben en castellano; no se mezclan idiomas dentro de un mismo archivo.
+- **Textos de interfaz en español**: la copia visible (etiquetas, descripciones, `aria-label`) y los datos del MOCK son contenido de producto en castellano, no «código».
+
 ## Puesta en marcha
 
 ```bash
