@@ -42,7 +42,7 @@ function timeLabel(now: number): string {
 }
 
 /** Aplica una pequeña variación a la telemetría para simular actualizaciones en vivo. */
-function jitter(prev: DashboardData, now: number, tick: number): DashboardData {
+export function jitter(prev: DashboardData, now: number, tick: number): DashboardData {
   const servers = prev.servers.map((s) => {
     const latency = clamp(s.latencyMs + rand(-6, 6), 5, 2000)
     return {
