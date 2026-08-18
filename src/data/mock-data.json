@@ -1,0 +1,499 @@
+{
+  "generatedAt": "2026-08-18T10:00:00Z",
+  "systemName": "Vigía",
+  "environment": "producción",
+  "summary": {
+    "totalServers": 8,
+    "operational": 5,
+    "degraded": 2,
+    "critical": 1
+  },
+  "latencyHistory": [
+    { "t": "00:00", "avg": 34, "p95": 71 },
+    { "t": "01:00", "avg": 31, "p95": 66 },
+    { "t": "02:00", "avg": 33, "p95": 69 },
+    { "t": "03:00", "avg": 29, "p95": 60 },
+    { "t": "04:00", "avg": 30, "p95": 63 },
+    { "t": "05:00", "avg": 28, "p95": 58 },
+    { "t": "06:00", "avg": 36, "p95": 78 },
+    { "t": "07:00", "avg": 52, "p95": 112 },
+    { "t": "08:00", "avg": 64, "p95": 138 },
+    { "t": "09:00", "avg": 71, "p95": 152 },
+    { "t": "10:00", "avg": 66, "p95": 141 },
+    { "t": "11:00", "avg": 58, "p95": 124 },
+    { "t": "12:00", "avg": 61, "p95": 131 },
+    { "t": "13:00", "avg": 55, "p95": 117 },
+    { "t": "14:00", "avg": 182, "p95": 391 },
+    { "t": "15:00", "avg": 143, "p95": 306 },
+    { "t": "16:00", "avg": 84, "p95": 179 },
+    { "t": "17:00", "avg": 59, "p95": 126 },
+    { "t": "18:00", "avg": 54, "p95": 115 },
+    { "t": "19:00", "avg": 49, "p95": 104 },
+    { "t": "20:00", "avg": 46, "p95": 97 },
+    { "t": "21:00", "avg": 42, "p95": 88 },
+    { "t": "22:00", "avg": 40, "p95": 84 },
+    { "t": "23:00", "avg": 38, "p95": 80 }
+  ],
+  "servers": [
+    {
+      "id": "srv-001",
+      "name": "api-edge-01",
+      "hostname": "edge-01.prod.vigia.io",
+      "region": "eu-west-1",
+      "role": "API Gateway",
+      "status": "operational",
+      "uptimePct": 99.99,
+      "latencyMs": 42,
+      "cpuPct": 34,
+      "memoryPct": 61,
+      "diskPct": 52,
+      "sparkline": [38, 41, 40, 44, 39, 42, 45, 41, 43, 42, 44, 42],
+      "lastIncident": "2026-08-16T14:22:00Z"
+    },
+    {
+      "id": "srv-002",
+      "name": "api-edge-02",
+      "hostname": "edge-02.prod.vigia.io",
+      "region": "eu-west-1",
+      "role": "API Gateway",
+      "status": "operational",
+      "uptimePct": 99.98,
+      "latencyMs": 47,
+      "cpuPct": 38,
+      "memoryPct": 64,
+      "diskPct": 55,
+      "sparkline": [41, 44, 43, 46, 45, 47, 44, 46, 48, 45, 47, 46],
+      "lastIncident": "2026-08-12T08:05:00Z"
+    },
+    {
+      "id": "srv-003",
+      "name": "auth-svc-01",
+      "hostname": "auth-01.prod.vigia.io",
+      "region": "us-east-1",
+      "role": "Autenticación",
+      "status": "degraded",
+      "uptimePct": 99.63,
+      "latencyMs": 175,
+      "cpuPct": 71,
+      "memoryPct": 79,
+      "diskPct": 46,
+      "sparkline": [84, 91, 88, 96, 120, 158, 201, 175, 169, 182, 176, 175],
+      "lastIncident": "2026-08-18T09:12:00Z"
+    },
+    {
+      "id": "srv-004",
+      "name": "worker-celery-01",
+      "hostname": "worker-01.prod.vigia.io",
+      "region": "us-east-1",
+      "role": "Cola de trabajos",
+      "status": "operational",
+      "uptimePct": 99.95,
+      "latencyMs": 88,
+      "cpuPct": 66,
+      "memoryPct": 58,
+      "diskPct": 71,
+      "sparkline": [79, 82, 84, 81, 86, 88, 85, 87, 90, 88, 89, 88],
+      "lastIncident": "2026-08-09T22:40:00Z"
+    },
+    {
+      "id": "srv-005",
+      "name": "worker-celery-02",
+      "hostname": "worker-02.prod.vigia.io",
+      "region": "us-east-1",
+      "role": "Cola de trabajos",
+      "status": "degraded",
+      "uptimePct": 99.71,
+      "latencyMs": 214,
+      "cpuPct": 92,
+      "memoryPct": 88,
+      "diskPct": 73,
+      "sparkline": [121, 134, 141, 158, 172, 190, 205, 216, 209, 218, 212, 214],
+      "lastIncident": "2026-08-18T09:47:00Z"
+    },
+    {
+      "id": "srv-006",
+      "name": "db-primary",
+      "hostname": "pg-primary.prod.vigia.io",
+      "region": "eu-central-1",
+      "role": "PostgreSQL primario",
+      "status": "operational",
+      "uptimePct": 99.99,
+      "latencyMs": 18,
+      "cpuPct": 44,
+      "memoryPct": 71,
+      "diskPct": 64,
+      "sparkline": [16, 17, 17, 18, 19, 18, 18, 20, 19, 18, 19, 18],
+      "lastIncident": "2026-07-28T03:15:00Z"
+    },
+    {
+      "id": "srv-007",
+      "name": "db-replica",
+      "hostname": "pg-replica.prod.vigia.io",
+      "region": "eu-central-1",
+      "role": "PostgreSQL réplica",
+      "status": "operational",
+      "uptimePct": 99.98,
+      "latencyMs": 21,
+      "cpuPct": 26,
+      "memoryPct": 53,
+      "diskPct": 60,
+      "sparkline": [19, 20, 21, 20, 22, 21, 22, 23, 21, 22, 21, 21],
+      "lastIncident": "2026-07-28T03:15:00Z"
+    },
+    {
+      "id": "srv-008",
+      "name": "cache-redis-01",
+      "hostname": "redis-01.prod.vigia.io",
+      "region": "eu-west-1",
+      "role": "Redis cache",
+      "status": "critical",
+      "uptimePct": 99.42,
+      "latencyMs": 486,
+      "cpuPct": 96,
+      "memoryPct": 94,
+      "diskPct": 81,
+      "sparkline": [172, 190, 214, 240, 268, 305, 342, 388, 421, 455, 470, 486],
+      "lastIncident": "2026-08-18T09:58:00Z"
+    }
+  ],
+  "errorLogs": [
+    {
+      "id": "log-001",
+      "timestamp": "2026-08-18T09:58:31Z",
+      "level": "critical",
+      "service": "cache-redis-01",
+      "message": "Redis OOM: maxmemory 8gb excedido, escrituras rechazadas",
+      "occurrences": 3,
+      "source": "redis",
+      "status": "new"
+    },
+    {
+      "id": "log-002",
+      "timestamp": "2026-08-18T09:52:10Z",
+      "level": "error",
+      "service": "api-gateway",
+      "message": "Connection pool agotado: 503 upstream en api-edge-02",
+      "occurrences": 124,
+      "source": "api-edge-02",
+      "status": "new"
+    },
+    {
+      "id": "log-003",
+      "timestamp": "2026-08-18T09:47:44Z",
+      "level": "exception",
+      "service": "auth-svc",
+      "message": "TimeoutError: connect ETIMEDOUT 10.0.4.18:5432",
+      "occurrences": 47,
+      "source": "auth-svc-01",
+      "status": "new"
+    },
+    {
+      "id": "log-004",
+      "timestamp": "2026-08-18T09:41:02Z",
+      "level": "error",
+      "service": "worker",
+      "message": "Límite de reintentos alcanzado para el job webhooks:send#88213",
+      "occurrences": 12,
+      "source": "worker-celery-02",
+      "status": "new"
+    },
+    {
+      "id": "log-005",
+      "timestamp": "2026-08-18T09:36:19Z",
+      "level": "warning",
+      "service": "db-replica",
+      "message": "Lag de replicación superó el umbral de 5 s",
+      "occurrences": 8,
+      "source": "pg-replica",
+      "status": "acknowledged"
+    },
+    {
+      "id": "log-006",
+      "timestamp": "2026-08-18T09:30:05Z",
+      "level": "error",
+      "service": "api-gateway",
+      "message": "Fallo en verificación de firma JWT (token expirado)",
+      "occurrences": 231,
+      "source": "api-edge-01",
+      "status": "acknowledged"
+    },
+    {
+      "id": "log-007",
+      "timestamp": "2026-08-18T09:24:51Z",
+      "level": "exception",
+      "service": "worker",
+      "message": "UnhandledPromiseRejection: undefined is not a function",
+      "occurrences": 2,
+      "source": "worker-celery-01",
+      "status": "resolved"
+    },
+    {
+      "id": "log-008",
+      "timestamp": "2026-08-18T09:18:33Z",
+      "level": "warning",
+      "service": "auth-svc",
+      "message": "Rate limit al 92% de la cuota del pool de IPs",
+      "occurrences": 5,
+      "source": "auth-svc-01",
+      "status": "acknowledged"
+    },
+    {
+      "id": "log-009",
+      "timestamp": "2026-08-18T09:12:09Z",
+      "level": "error",
+      "service": "postgres",
+      "message": "Deadlock detectado en la tabla sessions",
+      "occurrences": 4,
+      "source": "db-primary",
+      "status": "resolved"
+    },
+    {
+      "id": "log-010",
+      "timestamp": "2026-08-18T09:05:27Z",
+      "level": "exception",
+      "service": "api-gateway",
+      "message": "QuotaExceededError: cuota mensual de requests excedida",
+      "occurrences": 1,
+      "source": "api-edge-02",
+      "status": "resolved"
+    }
+  ],
+  "exceptions": [
+    {
+      "type": "JsonWebTokenError",
+      "message": "token expirado",
+      "file": "src/middleware/auth.ts:42",
+      "count": 356,
+      "lastSeen": "2026-08-18T09:30:05Z"
+    },
+    {
+      "type": "TimeoutError",
+      "message": "connect ETIMEDOUT 10.0.4.18:5432",
+      "file": "node_modules/pg/lib/connection.js:88",
+      "count": 128,
+      "lastSeen": "2026-08-18T09:47:44Z"
+    },
+    {
+      "type": "PrismaClientKnownRequestError",
+      "message": "Deadlock found when trying to get lock",
+      "file": "prisma/query-engine:1",
+      "count": 41,
+      "lastSeen": "2026-08-18T09:12:09Z"
+    },
+    {
+      "type": "RedisError",
+      "message": "OOM command not allowed when used memory > 'maxmemory'",
+      "file": "src/cache/redis.ts:117",
+      "count": 17,
+      "lastSeen": "2026-08-18T09:58:31Z"
+    }
+  ],
+  "databases": [
+    {
+      "id": "db-001",
+      "name": "db-primary",
+      "engine": "PostgreSQL 16",
+      "status": "operational",
+      "connections": 128,
+      "connectionsLimit": 200,
+      "queryLatencyMs": 18,
+      "slowQueries": 6,
+      "replicationLagSec": 0,
+      "sizeGb": 412
+    },
+    {
+      "id": "db-002",
+      "name": "db-replica",
+      "engine": "PostgreSQL 16",
+      "status": "operational",
+      "connections": 74,
+      "connectionsLimit": 150,
+      "queryLatencyMs": 24,
+      "slowQueries": 2,
+      "replicationLagSec": 0.4,
+      "sizeGb": 380
+    },
+    {
+      "id": "db-003",
+      "name": "analytics-clickhouse",
+      "engine": "ClickHouse 24",
+      "status": "degraded",
+      "connections": 31,
+      "connectionsLimit": 64,
+      "queryLatencyMs": 92,
+      "slowQueries": 14,
+      "replicationLagSec": 2.1,
+      "sizeGb": 1840
+    }
+  ],
+  "apis": [
+    {
+      "id": "api-001",
+      "method": "GET",
+      "path": "/v1/servers",
+      "status": "operational",
+      "latencyMs": 38,
+      "requestsPerMin": 1240,
+      "errorRatePct": 0.1,
+      "availabilityPct": 99.99
+    },
+    {
+      "id": "api-002",
+      "method": "GET",
+      "path": "/v1/logs",
+      "status": "operational",
+      "latencyMs": 52,
+      "requestsPerMin": 860,
+      "errorRatePct": 0.3,
+      "availabilityPct": 99.97
+    },
+    {
+      "id": "api-003",
+      "method": "POST",
+      "path": "/v1/alerts",
+      "status": "operational",
+      "latencyMs": 74,
+      "requestsPerMin": 210,
+      "errorRatePct": 0.2,
+      "availabilityPct": 99.98
+    },
+    {
+      "id": "api-004",
+      "method": "GET",
+      "path": "/v1/metrics",
+      "status": "degraded",
+      "latencyMs": 410,
+      "requestsPerMin": 640,
+      "errorRatePct": 2.4,
+      "availabilityPct": 99.71
+    },
+    {
+      "id": "api-005",
+      "method": "POST",
+      "path": "/v1/auth/token",
+      "status": "degraded",
+      "latencyMs": 260,
+      "requestsPerMin": 530,
+      "errorRatePct": 4.8,
+      "availabilityPct": 99.42
+    },
+    {
+      "id": "api-006",
+      "method": "GET",
+      "path": "/v1/queues",
+      "status": "operational",
+      "latencyMs": 44,
+      "requestsPerMin": 96,
+      "errorRatePct": 0,
+      "availabilityPct": 100
+    },
+    {
+      "id": "api-007",
+      "method": "DELETE",
+      "path": "/v1/logs/:id",
+      "status": "operational",
+      "latencyMs": 61,
+      "requestsPerMin": 34,
+      "errorRatePct": 0.1,
+      "availabilityPct": 99.99
+    }
+  ],
+  "queues": [
+    {
+      "id": "queue-001",
+      "name": "emails",
+      "status": "operational",
+      "active": 12,
+      "waiting": 340,
+      "failed": 3,
+      "throughputPerMin": 210,
+      "consumers": 4
+    },
+    {
+      "id": "queue-002",
+      "name": "webhooks",
+      "status": "operational",
+      "active": 8,
+      "waiting": 120,
+      "failed": 1,
+      "throughputPerMin": 96,
+      "consumers": 3
+    },
+    {
+      "id": "queue-003",
+      "name": "indexer",
+      "status": "degraded",
+      "active": 45,
+      "waiting": 1890,
+      "failed": 27,
+      "throughputPerMin": 18,
+      "consumers": 6
+    },
+    {
+      "id": "queue-004",
+      "name": "image-processing",
+      "status": "critical",
+      "active": 2,
+      "waiting": 610,
+      "failed": 54,
+      "throughputPerMin": 4,
+      "consumers": 2
+    }
+  ],
+  "securityAlerts": [
+    {
+      "id": "sec-001",
+      "timestamp": "2026-08-18T09:58:12Z",
+      "severity": "critical",
+      "type": "Fuerza bruta",
+      "source": "auth-svc-01",
+      "message": "1.204 intentos de login fallidos desde ASN 4134 (CN) en 10 min",
+      "status": "investigating"
+    },
+    {
+      "id": "sec-002",
+      "timestamp": "2026-08-18T09:51:40Z",
+      "severity": "high",
+      "type": "Inyección SQL",
+      "source": "api-edge-01",
+      "message": "Patrón «' OR 1=1--» detectado en el query param «id»",
+      "status": "open"
+    },
+    {
+      "id": "sec-003",
+      "timestamp": "2026-08-18T09:44:07Z",
+      "severity": "high",
+      "type": "Escaneo de puertos",
+      "source": "edge-02.prod.vigia.io",
+      "message": "Escaneo secuencial de 22 puertos desde 185.220.101.0/24",
+      "status": "open"
+    },
+    {
+      "id": "sec-004",
+      "timestamp": "2026-08-18T09:29:55Z",
+      "severity": "medium",
+      "type": "Certificado TLS",
+      "source": "load-balancer",
+      "message": "wildcard.vigia.io expira en 7 días",
+      "status": "open"
+    },
+    {
+      "id": "sec-005",
+      "timestamp": "2026-08-18T09:22:18Z",
+      "severity": "medium",
+      "type": "Tasa de errores anómala",
+      "source": "/v1/auth/token",
+      "message": "Error rate 4.8% supera el umbral configurado de 1%",
+      "status": "investigating"
+    },
+    {
+      "id": "sec-006",
+      "timestamp": "2026-08-18T08:55:03Z",
+      "severity": "low",
+      "type": "Clave de API creada",
+      "source": "iam",
+      "message": "Clave con scope write:alerts creada por el usuario ops-admin",
+      "status": "resolved"
+    }
+  ]
+}
