@@ -96,6 +96,18 @@ export interface SecurityAlert {
   status: AlertStatus
 }
 
+export interface UserProfile {
+  id: string
+  name: string
+  email: string
+  role: string
+  department: string
+  location: string
+  timezone: string
+  lastLogin: number
+  permissions: string[]
+}
+
 export interface Summary {
   totalServers: number
   operational: number
@@ -107,6 +119,7 @@ export interface DashboardData {
   systemName: string
   environment: string
   updatedAt: number
+  currentUser: UserProfile
   summary: Summary
   latencyHistory: LatencyPoint[]
   servers: Server[]

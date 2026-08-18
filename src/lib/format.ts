@@ -30,6 +30,16 @@ export function formatTime(epoch: number): string {
   }).format(epoch)
 }
 
+export function formatDateTime(epoch: number): string {
+  return new Intl.DateTimeFormat('es-ES', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(epoch)
+}
+
 export function timeAgo(epoch: number, now: number): string {
   const diff = Math.max(0, now - epoch)
   const s = Math.floor(diff / 1000)
