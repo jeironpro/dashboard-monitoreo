@@ -1,4 +1,5 @@
 import { Activity } from 'lucide-react'
+import { Bar } from './Bar'
 import { SectionHeading } from './SectionHeading'
 import { StatusBadge } from './StatusBadge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -31,15 +32,7 @@ function DatabasesCard({ databases }: { databases: Database[] }) {
                 <StatusBadge meta={meta} pulse={db.status === 'critical'} />
               </div>
               <div className="flex items-center gap-2">
-                <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-paper-3">
-                  <div
-                    className={cn(
-                      'h-full rounded-full',
-                      usage >= 90 ? 'bg-danger' : usage >= 70 ? 'bg-warning' : 'bg-signal',
-                    )}
-                    style={{ width: `${usage}%` }}
-                  />
-                </div>
+                <Bar value={usage} tone={usage >= 90 ? 'bg-danger' : usage >= 70 ? 'bg-warning' : 'bg-signal'} />
                 <span className="num whitespace-nowrap text-xs text-neutral">
                   {db.connections}/{db.connectionsLimit}
                 </span>

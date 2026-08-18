@@ -10,10 +10,10 @@ import {
 import { SectionHeading } from './SectionHeading'
 import { StatusBadge } from './StatusBadge'
 import { pulseIndicators } from '@/lib/anime'
-import { ALERT_SEVERITY } from '@/lib/status'
+import { ALERT_SEVERITY, ALERT_STATUS } from '@/lib/status'
 import { timeAgo } from '@/lib/format'
 import { cn } from '@/lib/utils'
-import type { AlertSeverity, AlertStatus, DashboardData, SecurityAlert } from '@/types/dashboard'
+import type { AlertSeverity, DashboardData, SecurityAlert } from '@/types/dashboard'
 
 const SEVERITY_ORDER: Record<AlertSeverity, number> = {
   critical: 0,
@@ -27,12 +27,6 @@ const SEVERITY_ICON: Record<AlertSeverity, LucideIcon> = {
   high: AlertTriangle,
   medium: BellRing,
   low: Info,
-}
-
-const ALERT_STATUS: Record<AlertStatus, { label: string; cls: string }> = {
-  open: { label: 'Abierta', cls: 'text-danger' },
-  investigating: { label: 'En investigación', cls: 'text-warning' },
-  resolved: { label: 'Resuelta', cls: 'text-success' },
 }
 
 function AlertRow({ alert, now }: { alert: SecurityAlert; now: number }) {

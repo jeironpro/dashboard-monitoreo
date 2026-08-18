@@ -4,10 +4,10 @@ import { SectionHeading } from './SectionHeading'
 import { StatusBadge } from './StatusBadge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { LOG_LEVEL } from '@/lib/status'
+import { LOG_LEVEL, LOG_STATUS } from '@/lib/status'
 import { formatTime } from '@/lib/format'
 import { cn } from '@/lib/utils'
-import type { DashboardData, ErrorLog, LogLevel, LogStatus } from '@/types/dashboard'
+import type { DashboardData, ErrorLog, LogLevel } from '@/types/dashboard'
 
 type LogFilter = 'all' | LogLevel
 
@@ -18,12 +18,6 @@ const FILTERS: Array<{ value: LogFilter; label: string }> = [
   { value: 'warning', label: 'Avisos' },
   { value: 'exception', label: 'Excepciones' },
 ]
-
-const LOG_STATUS: Record<LogStatus, { label: string; cls: string }> = {
-  new: { label: 'Nuevo', cls: 'text-danger' },
-  acknowledged: { label: 'Visto', cls: 'text-warning' },
-  resolved: { label: 'Resuelto', cls: 'text-success' },
-}
 
 function LogRow({ log }: { log: ErrorLog }) {
   const meta = LOG_LEVEL[log.level]

@@ -1,4 +1,5 @@
 import { Server as ServerIcon } from 'lucide-react'
+import { Bar } from './Bar'
 import { SectionHeading } from './SectionHeading'
 import { Sparkline } from './Sparkline'
 import { StatusBadge } from './StatusBadge'
@@ -26,9 +27,7 @@ function UsageBar({ label, value }: { label: string; value: number }) {
       <span className="w-8 shrink-0 text-[11px] font-medium uppercase tracking-[0.06em] text-faint">
         {label}
       </span>
-      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-paper-3">
-        <div className={cn('h-full rounded-full', tone)} style={{ width: `${value}%` }} />
-      </div>
+      <Bar value={value} tone={tone} />
       <span className="num w-9 shrink-0 text-right text-xs text-neutral">{value}%</span>
     </div>
   )
