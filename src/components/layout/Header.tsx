@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CalendarClock, Check, ChevronDown, Menu, RefreshCw } from 'lucide-react'
 import { TIME_RANGE_LABELS, type TimeRange } from './time-range'
+import { UserMenu } from './UserMenu'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -11,6 +12,7 @@ import {
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
 import { formatTime } from '@/lib/format'
+import type { UserProfile } from '@/types/dashboard'
 
 interface HeaderProps {
   onMenuClick: () => void
@@ -18,9 +20,19 @@ interface HeaderProps {
   range: TimeRange
   onRangeChange: (range: TimeRange) => void
   onRefresh: () => void
+  user: UserProfile
+  onProfile: () => void
 }
 
-export function Header({ onMenuClick, updatedAt, range, onRangeChange, onRefresh }: HeaderProps) {
+export function Header({
+  onMenuClick,
+  updatedAt,
+  range,
+  onRangeChange,
+  onRefresh,
+  user,
+  onProfile,
+}: HeaderProps) {
   const [refreshing, setRefreshing] = useState(false)
 
   const handleRefresh = () => {
@@ -87,6 +99,8 @@ export function Header({ onMenuClick, updatedAt, range, onRangeChange, onRefresh
           </TooltipTrigger>
           <TooltipContent>Refrescar datos</TooltipContent>
         </Tooltip>
+
+        <UserMenu user={user} onProfile={onProfile} />
       </div>
     </header>
   )

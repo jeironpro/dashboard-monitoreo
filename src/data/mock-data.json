@@ -2,6 +2,24 @@
   "generatedAt": "2026-08-18T10:00:00Z",
   "systemName": "Vigía",
   "environment": "producción",
+  "currentUser": {
+    "id": "usr-ops-admin",
+    "name": "Laura Méndez",
+    "email": "laura.mendez@vigia.io",
+    "role": "Administradora de plataforma",
+    "department": "SRE · Plataforma",
+    "location": "Madrid, ES",
+    "timezone": "Europe/Madrid",
+    "lastLogin": "2026-08-18T07:42:00Z",
+    "permissions": [
+      "monitoring:read",
+      "alerts:ack",
+      "alerts:resolve",
+      "servers:restart",
+      "logs:read",
+      "config:write"
+    ]
+  },
   "summary": {
     "totalServers": 8,
     "operational": 5,

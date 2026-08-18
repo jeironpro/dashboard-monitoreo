@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatGb, formatMs, formatNumber, formatTime, formatUptime, timeAgo } from './format'
+import { formatDateTime, formatGb, formatMs, formatNumber, formatTime, formatUptime, timeAgo } from './format'
 
 describe('formatMs', () => {
   it('muestra milisegundos bajo 1000', () => {
@@ -44,6 +44,15 @@ describe('formatTime', () => {
   it('devuelve una hora en formato HH:MM:SS', () => {
     const epoch = new Date('2026-08-18T10:30:45').getTime()
     expect(formatTime(epoch)).toContain(':')
+  })
+})
+
+describe('formatDateTime', () => {
+  it('incluye día, mes y año', () => {
+    const epoch = new Date('2026-08-18T10:30:45').getTime()
+    const out = formatDateTime(epoch)
+    expect(out).toContain('2026')
+    expect(out).toContain('ago')
   })
 })
 

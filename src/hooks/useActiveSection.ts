@@ -7,11 +7,14 @@ const ACTIVE_OFFSET = 80
 /**
  * Devuelve el id de la sección visible (scroll-spy) para resaltar el sidebar.
  * En la parte superior de la página la primera sección queda activa por defecto.
+ * `enabled` pausa la observación cuando el dashboard no está montado visiblemente.
  */
-export function useActiveSection(ids: string[]): string {
+export function useActiveSection(ids: string[], enabled = true): string {
   const [active, setActive] = useState(ids[0] ?? '')
 
   useEffect(() => {
+    if (!enabled) return
+
     const update = () => {
       const pos = window.scrollY + ACTIVE_OFFSET
       let current = ids[0] ?? ''
@@ -32,7 +35,7 @@ export function useActiveSection(ids: string[]): string {
       window.removeEventListener('resize', update)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ids.join('|')])
+  }, [ids.join('|'), enabled])
 
   return active
 }

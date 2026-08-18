@@ -13,17 +13,20 @@ import type {
   SecurityAlert,
   Server,
   Summary,
+  UserProfile,
 } from '@/types/dashboard'
 
 type RawServer = Omit<Server, 'lastIncident'> & { lastIncident: string }
 type RawErrorLog = Omit<ErrorLog, 'timestamp'> & { timestamp: string }
 type RawException = Omit<ExceptionGroup, 'lastSeen'> & { lastSeen: string }
 type RawSecurityAlert = Omit<SecurityAlert, 'timestamp'> & { timestamp: string }
+type RawUserProfile = Omit<UserProfile, 'lastLogin'> & { lastLogin: string }
 
 interface RawMock {
   generatedAt: string
   systemName: string
   environment: string
+  currentUser: RawUserProfile
   summary: Summary
   latencyHistory: LatencyPoint[]
   servers: RawServer[]
@@ -61,6 +64,7 @@ export function loadMockData(now: number = Date.now()): DashboardData {
     systemName: raw.systemName,
     environment: raw.environment,
     updatedAt: now,
+    currentUser: { ...raw.currentUser, lastLogin: epoch(raw.currentUser.lastLogin) },
     summary: computeSummary(servers),
     latencyHistory: raw.latencyHistory,
     servers,

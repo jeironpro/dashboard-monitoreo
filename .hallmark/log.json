@@ -1,9 +1,0 @@
-[
-  {
-    "date": "2026-08-18",
-    "macrostructure": "Workbench",
-    "theme": "Cobalt",
-    "enrichment": "none",
-    "brief": "Vigía · dashboard de monitoreo de infraestructura (servidores, logs, BD, APIs, colas, seguridad)"
-  }
-]
