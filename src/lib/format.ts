@@ -10,7 +10,11 @@ export function formatPct(value: number, digits = 1): string {
 }
 
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('es-ES').format(value)
+  // useGrouping explícito: el ICU por defecto no agrupa números de 4 dígitos en es-ES.
+  return new Intl.NumberFormat('es-ES', {
+    useGrouping: true,
+    maximumFractionDigits: 0,
+  }).format(value)
 }
 
 export function formatUptime(pct: number): string {
