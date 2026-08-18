@@ -42,7 +42,7 @@ Frontend de un **dashboard de monitoreo de infraestructura** ("Vigía") que mues
 | 10 | `feature/animaciones` | `feature/animaciones: agrega animaciones con animejs` | Contadores numéricos, reveal escalonado, pulso de alertas críticas | ≤ 3 primitivas, respeta `prefers-reduced-motion` |
 | 11 | `feature/responsive` | `feature/responsive: garantiza responsive en 320 375 414 y 768` | Verificación de los 4 anchos, tablas→tarjetas, sheet móvil | Sin scroll horizontal; CTAs de una sola línea |
 | 12 | `test/casos-criticos` | `test/casos-criticos: agrega tests de formatos y estado` | Tests de utilidades (`format`) y hook de datos | `yarn test` pasa; cubre lógica no trivial |
-| 13 | `chore/verificacion` | `chore/verificacion: pasa typecheck build y slop test de diseño` | `yarn build` + `yarn lint` + slop test Hallmark 58/58 | Sin errores de tipos; registro en `.hallmark/log.json` |
+| 13 | `chore/verificacion` | `chore/verificacion: pasa typecheck build y slop test de diseño` | `yarn build` + `yarn lint` + slop test Hallmark 58/58 | Sin errores de tipos; registro local en `.hallmark/log.json` (no versionado) |
 
 ## Flujo por tarea (resumen de TASK.md)
 

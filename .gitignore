@@ -40,3 +40,6 @@ pnpm-debug.log*
 
 # Test coverage
 coverage/
+
+# Estado local de la skill Hallmark (no se versiona)
+.hallmark/
