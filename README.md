@@ -20,7 +20,7 @@ Frontend de un dashboard de **observabilidad de infraestructura** en tiempo real
 
 ## Diseño
 
-Sistema de diseño generado con las skills **Hallmark** (género *modern-minimal*, tema *Cobalt*) y **frontend-design**. Los tokens (OKLCH, tipografía, espaciado, easings) viven en `tokens.css` y se mapean a las variables de shadcn/ui en `src/index.css`. El libro de estilo está en `docs/style-guide.md` y el plan de implementación por tareas (convención dicresoft/TASK.md) en `docs/plan-implementacion.md`.
+Sistema de diseño generado con las skills **Hallmark** (género _modern-minimal_, tema _Cobalt_) y **frontend-design**. Los tokens (OKLCH, tipografía, espaciado, easings) viven en `tokens.css` y se mapean a las variables de shadcn/ui en `src/index.css`. El libro de estilo está en `docs/style-guide.md` y el plan de implementación por tareas (convención dicresoft/TASK.md) en `docs/plan-implementacion.md`.
 
 ## Convenciones de código
 
@@ -54,7 +54,7 @@ src/
 
 ## Responsive
 
-100 % responsive (mobile-first): la barra lateral se convierte en un *sheet* en móvil, las tablas ocultan columnas secundarias, las tarjetas se apilan y se garantiza ausencia de scroll horizontal con `overflow-x: clip`. Toda animación respeta `prefers-reduced-motion`.
+100 % responsive (mobile-first): la barra lateral se convierte en un _sheet_ en móvil, las tablas ocultan columnas secundarias, las tarjetas se apilan y se garantiza ausencia de scroll horizontal con `overflow-x: clip`. Toda animación respeta `prefers-reduced-motion`.
 
 ## Licencia
 
