@@ -8,23 +8,24 @@
 
 Colores en **OKLCH**, anclados a un matiz azul frío (hue ≈ 250–264). Un único acento cobalto; el resto neutros teñidos.
 
-| Token | Valor | Uso |
-|-------|-------|-----|
-| `--color-paper` | `oklch(98% 0.005 250)` | Fondo principal (blanco frío) |
-| `--color-paper-2` | `oklch(95.5% 0.006 250)` | Superficie secundaria (cards) |
-| `--color-paper-3` | `oklch(92% 0.008 250)` | Superficie hover / fondo sutil |
-| `--color-rule` | `oklch(88% 0.008 250)` | Bordes y hairlines |
-| `--color-neutral` | `oklch(58% 0.01 255)` | Texto secundario |
-| `--color-muted` | `oklch(45% 0.01 255)` | Texto atenuado |
-| `--color-ink` | `oklch(20% 0.012 258)` | Texto principal |
-| `--color-accent` | `oklch(52% 0.19 264)` | Acento cobalto: foco, activo, enlaces, datos |
-| `--color-accent-strong` | `oklch(47% 0.19 264)` | Hover del acento |
-| `--color-success` | `oklch(50% 0.14 155)` | Operativo / saludable |
-| `--color-warning` | `oklch(58% 0.15 70)` | Degradado / precaución |
-| `--color-danger` | `oklch(52% 0.19 25)` | Crítico / caído / fallo |
-| `--color-focus` | `oklch(52% 0.19 264)` | Anillo de foco (contraste ≥ 3:1) |
+| Token                   | Valor                    | Uso                                          |
+| ----------------------- | ------------------------ | -------------------------------------------- |
+| `--color-paper`         | `oklch(98% 0.005 250)`   | Fondo principal (blanco frío)                |
+| `--color-paper-2`       | `oklch(95.5% 0.006 250)` | Superficie secundaria (cards)                |
+| `--color-paper-3`       | `oklch(92% 0.008 250)`   | Superficie hover / fondo sutil               |
+| `--color-rule`          | `oklch(88% 0.008 250)`   | Bordes y hairlines                           |
+| `--color-neutral`       | `oklch(58% 0.01 255)`    | Texto secundario                             |
+| `--color-muted`         | `oklch(45% 0.01 255)`    | Texto atenuado                               |
+| `--color-ink`           | `oklch(20% 0.012 258)`   | Texto principal                              |
+| `--color-accent`        | `oklch(52% 0.19 264)`    | Acento cobalto: foco, activo, enlaces, datos |
+| `--color-accent-strong` | `oklch(47% 0.19 264)`    | Hover del acento                             |
+| `--color-success`       | `oklch(50% 0.14 155)`    | Operativo / saludable                        |
+| `--color-warning`       | `oklch(58% 0.15 70)`     | Degradado / precaución                       |
+| `--color-danger`        | `oklch(52% 0.19 25)`     | Crítico / caído / fallo                      |
+| `--color-focus`         | `oklch(52% 0.19 264)`    | Anillo de foco (contraste ≥ 3:1)             |
 
 Reglas:
+
 - El acento ocupa **≤ 5 %** de cualquier vista: es un subrayado/marcador, nunca un bloque de relleno.
 - Sin `#000`/`#fff` puros; neutros siempre con croma ≥ 0.005.
 - Estados de severidad siempre con **color + icono + texto** (nunca solo color).
@@ -33,11 +34,11 @@ Reglas:
 
 Tres familias (techo de la regla 2+1):
 
-| Rol | Fuente | Peso |
-|-----|--------|------|
-| Display (títulos) | Space Grotesk | 500 / 600 / 700 |
-| Body (texto e interfaz) | Inter | 400 / 500 / 600 |
-| Mono (métricas, logs, código) | JetBrains Mono | 400 / 500 |
+| Rol                           | Fuente         | Peso            |
+| ----------------------------- | -------------- | --------------- |
+| Display (títulos)             | Space Grotesk  | 500 / 600 / 700 |
+| Body (texto e interfaz)       | Inter          | 400 / 500 / 600 |
+| Mono (métricas, logs, código) | JetBrains Mono | 400 / 500       |
 
 Escala (ratio 1.25, base 16 px):
 
@@ -60,34 +61,39 @@ Escala de 4 pt (`--space-*`):
 
 ## 4. Breakpoints (mobile-first)
 
-| Breakpoint | `rem` | Uso |
-|-----------|-------|-----|
-| Base | < 40rem | Móvil (320 / 375 / 414 px) |
-| `md` | ≥ 48rem (768 px) | Sidebar visible, grid 2 columnas |
-| `lg` | ≥ 64rem (1024 px) | Grid 3–4 columnas, panel principal + resumen lateral |
-| `xl` | ≥ 80rem (1280 px) | Máxima densidad |
+| Breakpoint | `rem`             | Uso                                                  |
+| ---------- | ----------------- | ---------------------------------------------------- |
+| Base       | < 40rem           | Móvil (320 / 375 / 414 px)                           |
+| `md`       | ≥ 48rem (768 px)  | Sidebar visible, grid 2 columnas                     |
+| `lg`       | ≥ 64rem (1024 px) | Grid 3–4 columnas, panel principal + resumen lateral |
+| `xl`       | ≥ 80rem (1280 px) | Máxima densidad                                      |
 
 Responsive no negociable: sin scroll horizontal (`overflow-x: clip` en `html` y `body`), CTAs de una línea, tablas que colapsan a tarjetas en móvil, `minmax(0, 1fr)` en tracks con contenido.
 
 ## 5. Componentes base y estados
 
 ### Botones (shadcn `Button`)
+
 - Variantes: `default` (ink sobre paper, hover paper-3), `secondary`, `outline`, `ghost`, `link`.
 - Estados: default · hover · `:focus-visible` (anillo instantáneo) · active · disabled · loading.
 - Tamaño táctil ≥ 44 px en punteros gruesos.
 
 ### Cards (`Card`)
+
 - Borde hairline `--color-rule`, radio 6 px, superficie `--color-paper-2`.
 - Sin cards anidadas, sin franja lateral de color.
 
 ### Badges de estado (`StatusBadge`)
+
 - Estados: `operational` (success), `degraded` (warning), `critical` (danger), `neutral`.
 - Siempre con punto de color + texto además del color de fondo (nunca solo color).
 
 ### Tablas (`Table`)
+
 - Números con `tabular-nums`; en móvil colapsan a tarjetas con `data-label`.
 
 ### Inputs
+
 - `border-width` constante (1 px) entre estados; foco con `outline` (no `border`); helper con `min-height` reservado.
 
 ## 6. Iconografía

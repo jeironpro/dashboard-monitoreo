@@ -10,32 +10,32 @@ const ACTIVE_OFFSET = 80
  * `enabled` pausa la observación cuando el dashboard no está montado visiblemente.
  */
 export function useActiveSection(ids: string[], enabled = true): string {
-  const [active, setActive] = useState(ids[0] ?? '')
+    const [active, setActive] = useState(ids[0] ?? '')
 
-  useEffect(() => {
-    if (!enabled) return
+    useEffect(() => {
+        if (!enabled) return
 
-    const update = () => {
-      const pos = window.scrollY + ACTIVE_OFFSET
-      let current = ids[0] ?? ''
-      for (const id of ids) {
-        const el = document.getElementById(id)
-        if (!el) break
-        if (el.getBoundingClientRect().top + window.scrollY <= pos) current = id
-        else break
-      }
-      setActive(current)
-    }
+        const update = () => {
+            const pos = window.scrollY + ACTIVE_OFFSET
+            let current = ids[0] ?? ''
+            for (const id of ids) {
+                const el = document.getElementById(id)
+                if (!el) break
+                if (el.getBoundingClientRect().top + window.scrollY <= pos) current = id
+                else break
+            }
+            setActive(current)
+        }
 
-    update()
-    window.addEventListener('scroll', update, { passive: true })
-    window.addEventListener('resize', update, { passive: true })
-    return () => {
-      window.removeEventListener('scroll', update)
-      window.removeEventListener('resize', update)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ids.join('|'), enabled])
+        update()
+        window.addEventListener('scroll', update, { passive: true })
+        window.addEventListener('resize', update, { passive: true })
+        return () => {
+            window.removeEventListener('scroll', update)
+            window.removeEventListener('resize', update)
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ids.join('|'), enabled])
 
-  return active
+    return active
 }

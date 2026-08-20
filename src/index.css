@@ -3,212 +3,240 @@
 
 /* ── shadcn/ui · variables consumidas por los componentes (mapeadas a tokens Hallmark) ── */
 :root {
-  --radius: 0.375rem; /* 6px */
+    --radius: 0.375rem; /* 6px */
 
-  --background: var(--color-paper-2);
-  --foreground: var(--color-ink);
+    --background: var(--color-paper-2);
+    --foreground: var(--color-ink);
 
-  --card: var(--color-paper);
-  --card-foreground: var(--color-ink);
+    --card: var(--color-paper);
+    --card-foreground: var(--color-ink);
 
-  --popover: var(--color-paper);
-  --popover-foreground: var(--color-ink);
+    --popover: var(--color-paper);
+    --popover-foreground: var(--color-ink);
 
-  --primary: var(--color-ink);
-  --primary-foreground: var(--color-paper);
+    --primary: var(--color-ink);
+    --primary-foreground: var(--color-paper);
 
-  --secondary: var(--color-paper-3);
-  --secondary-foreground: var(--color-ink);
+    --secondary: var(--color-paper-3);
+    --secondary-foreground: var(--color-ink);
 
-  --muted: var(--color-paper-2);
-  --muted-foreground: var(--color-neutral);
+    --muted: var(--color-paper-2);
+    --muted-foreground: var(--color-neutral);
 
-  --accent: var(--color-paper-3);
-  --accent-foreground: var(--color-ink);
+    --accent: var(--color-paper-3);
+    --accent-foreground: var(--color-ink);
 
-  --destructive: var(--color-danger);
-  --destructive-foreground: var(--color-accent-ink);
+    --destructive: var(--color-danger);
+    --destructive-foreground: var(--color-accent-ink);
 
-  --border: var(--color-rule);
-  --input: var(--color-rule);
-  --ring: var(--color-focus);
+    --border: var(--color-rule);
+    --input: var(--color-rule);
+    --ring: var(--color-focus);
 
-  --chart-1: var(--color-accent);
-  --chart-2: var(--color-success);
-  --chart-3: var(--color-warning);
-  --chart-4: var(--color-danger);
-  --chart-5: var(--color-neutral);
+    --chart-1: var(--color-accent);
+    --chart-2: var(--color-success);
+    --chart-3: var(--color-warning);
+    --chart-4: var(--color-danger);
+    --chart-5: var(--color-neutral);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
 
-  /* Dominio — acento cobalto (evita chocar con el «accent» de shadcn, que es superficie hover) */
-  --color-signal: var(--color-accent);
-  --color-signal-strong: var(--color-accent-strong);
-  --color-signal-soft: var(--color-accent-soft);
-  --color-signal-ink: var(--color-accent-ink);
+    /* Dominio — acento cobalto (evita chocar con el «accent» de shadcn, que es superficie hover) */
+    --color-signal: var(--color-accent);
+    --color-signal-strong: var(--color-accent-strong);
+    --color-signal-soft: var(--color-accent-soft);
+    --color-signal-ink: var(--color-accent-ink);
 
-  /* Estados */
-  --color-success: var(--color-success);
-  --color-success-soft: var(--color-success-soft);
-  --color-warning: var(--color-warning);
-  --color-warning-soft: var(--color-warning-soft);
-  --color-danger: var(--color-danger);
-  --color-danger-soft: var(--color-danger-soft);
+    /* Estados */
+    --color-success: var(--color-success);
+    --color-success-soft: var(--color-success-soft);
+    --color-warning: var(--color-warning);
+    --color-warning-soft: var(--color-warning-soft);
+    --color-danger: var(--color-danger);
+    --color-danger-soft: var(--color-danger-soft);
 
-  /* Superficies y texto adicionales */
-  --color-paper: var(--color-paper);
-  --color-paper-2: var(--color-paper-2);
-  --color-paper-3: var(--color-paper-3);
-  --color-rule: var(--color-rule);
-  --color-ink: var(--color-ink);
-  --color-neutral: var(--color-neutral);
-  --color-faint: var(--color-muted);
+    /* Superficies y texto adicionales */
+    --color-paper: var(--color-paper);
+    --color-paper-2: var(--color-paper-2);
+    --color-paper-3: var(--color-paper-3);
+    --color-rule: var(--color-rule);
+    --color-ink: var(--color-ink);
+    --color-neutral: var(--color-neutral);
+    --color-faint: var(--color-muted);
 
-  /* Tipografía */
-  --font-sans: var(--font-body);
-  --font-display: var(--font-display);
-  --font-mono: var(--font-mono);
+    /* Tipografía */
+    --font-sans: var(--font-body);
+    --font-display: var(--font-display);
+    --font-mono: var(--font-mono);
 
-  /* Radios */
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+    /* Radios */
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
+    * {
+        @apply border-border outline-ring/50;
+    }
 
-  html {
-    overflow-x: clip;
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
-  }
+    html {
+        overflow-x: clip;
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+    }
 
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    overflow-x: clip;
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    line-height: 1.55;
-    min-width: 320px;
-  }
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+        overflow-x: clip;
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        line-height: 1.55;
+        min-width: 320px;
+    }
 
-  ::selection {
-    background: var(--color-accent-soft);
-    color: var(--color-ink);
-  }
+    ::selection {
+        background: var(--color-accent-soft);
+        color: var(--color-ink);
+    }
 
-  /* Anillo de foco por defecto (especificidad :where = 0, las utilidades lo sobrescriben).
+    /* Anillo de foco por defecto (especificidad :where = 0, las utilidades lo sobrescriben).
      Aparece al instante, nunca animado. */
-  :where(a, button, input, select, textarea, summary, [role='button'], [tabindex]):focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-  }
+    :where(a, button, input, select, textarea, summary, [role='button'], [tabindex]):focus-visible {
+        outline: 2px solid var(--color-focus);
+        outline-offset: 2px;
+    }
 }
 
 @layer components {
-  /* Números y métricas — mono + tabular */
-  .num {
-    font-family: var(--font-mono);
-    font-variant-numeric: tabular-nums;
-  }
+    /* Números y métricas — mono + tabular */
+    .num {
+        font-family: var(--font-mono);
+        font-variant-numeric: tabular-nums;
+    }
 
-  /* Anclas de sección: compensan la barra superior fija */
-  .section-anchor {
-    scroll-margin-top: calc(var(--banner-height) + var(--space-lg));
-  }
+    /* Anclas de sección: compensan la barra superior fija */
+    .section-anchor {
+        scroll-margin-top: calc(var(--banner-height) + var(--space-lg));
+    }
 
-  /* Indicador EN VIVO — pulso funcional (no decorativo) */
-  .live-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: var(--radius-full);
-    background: var(--color-success);
-  }
+    /* Indicador EN VIVO — pulso funcional (no decorativo) */
+    .live-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: var(--radius-full);
+        background: var(--color-success);
+    }
 
-  .live-dot--idle {
-    background: var(--color-neutral);
-  }
+    .live-dot--idle {
+        background: var(--color-neutral);
+    }
 
-  /* Regla de sección */
-  .section-rule {
-    border-top: var(--rule-hairline) solid var(--color-rule);
-  }
+    /* Regla de sección */
+    .section-rule {
+        border-top: var(--rule-hairline) solid var(--color-rule);
+    }
 }
 
 /* Estado inicial oculto para el reveal de entrada (solo con JS y sin reduced-motion).
    anime.js lo anima a opacidad 1; sin JS el contenido permanece visible. */
 @media (prefers-reduced-motion: no-preference) {
-  .js [data-reveal] {
-    opacity: 0;
-    transform: translateY(10px);
-  }
+    .js [data-reveal] {
+        opacity: 0;
+        transform: translateY(10px);
+    }
 }
 
 /* Keyframes de chrome (sheet / menú): reemplazan tailwindcss-animate con easings tokenizados. */
 @keyframes sheet-in-left {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 @keyframes sheet-out-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 @keyframes menu-in {
-  from { opacity: 0; transform: scale(0.98) translateY(-4px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 @keyframes menu-out {
-  from { opacity: 1; transform: scale(1) translateY(0); }
-  to { opacity: 0; transform: scale(0.98) translateY(-4px); }
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.98) translateY(-4px);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+    html {
+        scroll-behavior: auto;
+    }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
